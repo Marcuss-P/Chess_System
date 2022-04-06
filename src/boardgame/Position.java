@@ -26,6 +26,12 @@ public class Position {
 		this.column = column;
 	}
 	
+	//atualizar os valores de uma posição
+	public void setValue (int row, int column) {
+		this.row = row;
+		this.column = column;
+	}
+	
 	@Override 
 	//Usa-se o Override no toString pois esta se sobreescrevendo
 	//um metodo toString que é da classe object 	
