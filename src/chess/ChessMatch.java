@@ -28,6 +28,14 @@ public class ChessMatch {
 		// retorna matriz de peças da ChessMatch
 		return mat;
 	}
+	
+	public boolean[][] possibleMoves(ChessPosition sourcePosition){
+		//converter a posição de xadrez para uma posição de matriz normal
+		Position position = sourcePosition.toPosition();
+		validateSourcePosition(position);
+		return board.piece(position).possibleMoves();
+	}
+	
 	// sourcePosition é a posição de origem e a target é a posição de destino
 	public ChessPiece performChessMove(ChessPosition sourcePosition, ChessPosition targetPosition) {
 		//convertenda para posição da matriz
