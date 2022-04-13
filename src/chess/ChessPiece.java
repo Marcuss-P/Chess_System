@@ -16,7 +16,11 @@ public abstract class ChessPiece extends Piece {
 
 	public Color getColor() {
 		return color;
-	}	
+	}
+	
+	public ChessPosition getChessPosition() {
+		return ChessPosition.fromPosition(position);
+	}
 	
 	//Esta aqui pois sera reaproveitada em todas a peças
 	//protected pois sera acessada somente peloo mesmo pacote e pelas subclasses	
